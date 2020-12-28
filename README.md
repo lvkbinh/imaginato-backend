@@ -1,3 +1,36 @@
+## Configuration
+This project is using .env file to contain configuration values
+Example:
+
+```
+.env
+# App settings
+PORT=1337
+
+# Database settings
+DATABASE_HOST=localhost
+DATABASE_PORT=3306
+DATABASE_NAME=imaginato
+DATABASE_USER=root
+DATABASE_PASS=MMS123456
+DATABASE_SYNC=true
+```
+
+## List available API
+
+Default url for API documentation (Swagger) is [http://127.0.0.1:2310/api/#/](http://127.0.0.1:2310/api/#/)
+
+| Url | Description |
+| --- | ----------- |
+| `GET /api/v1/health-check` | System health check |
+| `GET /api/v1/articles` | List all articles |
+| `POST /api/v1/articles` | Create an article |
+| `GET /api/v1/articles/:articleId/content` | Get content of an article |
+| `GET /api/v1/articles/:articleId/comments` | List all comments of an article |
+| `POST /api/v1/articles/:articleId/comments` | Add a comment for an article |
+| `GET /api/v1/comments/:articleId/comments` | List all children comment of a comment |
+| `POST /api/v1/comments/:articleId/comments` | Add a comment for a comment |
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
